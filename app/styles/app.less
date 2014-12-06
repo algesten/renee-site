@@ -1,0 +1,114 @@
+
+@screen-xs: 480px;
+@screen-sm: 768px;
+@screen-md: 992px;
+@screen-lg: 1200px;
+
+@logo-pink: #e7238b;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    background: url(/img/kapo.jpg);
+    background-size: cover;
+    background-position: 50% 80%;
+    height: 100%;
+    h1 {
+        position: absolute;
+        top: 70px;
+        @media(min-width: @screen-sm) {
+            top: 30px;
+        }
+        left: 50%;
+        span {
+            display: none;
+        }
+        background: url(/img/logo.svg);
+        background-size: cover;
+        background-blend-mode: darken;
+        @ratio: 53.82 / 53.33; // height / width
+        @width: 120px;
+        width: @width;
+        height: @width * @ratio;
+        margin-left: -@width / 2;
+        opacity: 1%;
+    }
+    .coming {
+        font-size: 0.8em;
+        position: absolute;
+        top: 330px;
+        @media(min-width: @screen-sm) {
+            top: 380px;
+        }
+        left: 50%;
+        @width: 28.5em;
+        width: @width;
+        margin-left: -@width / 2;
+        line-height: 2.7em;
+        background: white;
+        text-align: center;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: rotate(-2deg);
+        transform: rotate(-2deg);
+        box-shadow: 0.38em 0.38em 0.38em rgba(0,0,0,0.2);
+        padding-right: 2em;
+        &:before {
+            content: " ";
+            background: white;
+            width: 0.4165em;
+            height: 2.6em;
+            position: absolute;
+            bottom: 0;
+            left: -0.1923em;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: skewX(-9deg);
+            transform: skewX(-9deg);
+        }
+    }
+    .authorised {
+        display: table;
+        position: absolute;
+        top: 400px;
+        @media(min-width: @screen-sm) {
+            top: 500px;
+        }
+        left: 10%;
+        > .inner {
+            font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+            font-weight: 600;
+            color: @logo-pink;
+            background: white;
+            box-shadow: 0.38em 0.38em 0.38em rgba(0,0,0,0.2);
+            font-size: 0.9em;
+            line-height: 1.3em;
+            text-transform: uppercase;
+            @size: 6.5em;
+            border-radius: 50%;
+            width: @size;
+            height: @size;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+            opacity: 0.8;
+        }
+    }
+}
