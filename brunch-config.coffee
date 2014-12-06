@@ -16,3 +16,6 @@ exports.config =
       jade:
         doctype: "html"
       htmlmin: false
+
+  server:
+    path: 'lib/brunch-wrapper'
