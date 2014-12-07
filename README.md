@@ -1,4 +1,7 @@
 
+http://www.ashtangarenee.com/
+-----------------------------
+
 Install global stuff.
 
 * Ensure you have [`brew`](http://brew.sh/).
